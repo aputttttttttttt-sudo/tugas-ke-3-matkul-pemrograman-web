@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BukuKita - Perpustakaan Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Buku<span>Kita.</span></a>
+
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#koleksi">Koleksi</a>
+            <a href="#tentang">Tentang</a>
+        </nav>
+
+        <button id="favoriteButton" class="favorite-button">
+            ♥ Favorit (<span id="favoriteCount">0</span>)
+        </button>
+    </header>
+
+    <main>
+        <section class="hero" id="beranda">
+            <div class="hero-content">
+                <p class="eyebrow">PERPUSTAKAAN DIGITAL</p>
+
+                <h1>Temukan Buku,<br>
+                    <span>Temukan Dunia Baru.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Jelajahi berbagai buku menarik untuk menambah
+                    wawasan, inspirasi, dan pengetahuanmu.
+                </p>
+
+                <a href="#koleksi" class="hero-button">
+                    Jelajahi Koleksi →
+                </a>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="book-illustration">
+                    <span>📚</span>
+                    <p>Read More,<br>Learn More.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection" id="koleksi">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">KOLEKSI PILIHAN</p>
+                    <h2>Temukan Buku Favoritmu</h2>
+                </div>
+
+                <p id="bookTotal">0 buku tersedia</p>
+            </div>
+
+            <div class="search-area">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Cari judul buku atau nama penulis..."
+                    aria-label="Cari buku"
+                >
+
+                <select id="categoryFilter" aria-label="Filter kategori">
+                    <option value="Semua">Semua Kategori</option>
+                    <option value="Teknologi">Teknologi</option>
+                    <option value="Pendidikan">Pendidikan</option>
+                    <option value="Novel">Novel</option>
+                    <option value="Bisnis">Bisnis</option>
+                </select>
+            </div>
+
+            <div class="book-grid" id="bookGrid"></div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                Buku tidak ditemukan. Coba kata kunci lain.
+            </p>
+        </section>
+
+        <section class="about" id="tentang">
+            <p class="eyebrow">TENTANG BUKUKITA</p>
+
+            <h2>Satu Buku, Banyak Inspirasi.</h2>
+
+            <p>
+                BukuKita merupakan website katalog buku digital
+                sederhana yang membantu pengguna menemukan buku
+                berdasarkan kategori dan judul.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 BukuKita. Dibuat untuk belajar Pemrograman Web.</p>
+    </footer>
+
+    <!-- Jendela detail buku -->
+    <dialog id="bookDialog">
+        <div class="dialog-content">
+            <button id="closeDialog" class="close-button"
+                aria-label="Tutup detail">×</button>
+
+            <div id="bookDetail"></div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
